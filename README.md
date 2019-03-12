@@ -15,6 +15,14 @@
 
 Minimal Hello world example to test Apache Thrift using Haskell.
 
+This project is for anyone who wants to learn and test Apache Thrift in Haskell.
+A server is provided with the following functions:
+* ping
+* message
+
+A client is also provided to test the server by sending a ping or a message and return an answer.
+
+This is a more simple example than the tutorial example provided by Apache Thrift.
 
 [Contents](#contents)
 
@@ -49,18 +57,41 @@ Minimal Hello world example to test Apache Thrift using Haskell.
 
 ### Installation
 
+To install the requirements:
+1. sudo apt install haskell-platform 
+2. Install Apache Thrift
+
+To install the project:
 
 ```console
-$ git clone https://github.com/NorbertoBurciaga/hs-thrift-hello.git
-$ cd apache-thrift-hello/src
-$ thrift --gen cpp hello.thrift
-$ make
+~/$ git clone https://github.com/NorbertoBurciaga/hs-thrift-hello.git
+~/$ cd hs-thrift-hello/src
+~/hs-thrift-hello/src$ thrift --gen hs hello.thrift
+~/hs-thrift-hello/src$ cd ..
+~/hs-thrift-hello$ cabal install
 ```
 
 ### Testing
 
+To run a test
+1. Execute server:
+In a terminal perform the following commands:
+
+```console
+~/hs-thrift-hello$ cd dist/build/hs-thrift-hello/
+~/hs-thrift-hello/dist/build/hs-thrift-hello$ ./hs-thrift-hello
+```
+2. Execute client:
+In another terminal execute:
+
+```console
+~/hs-thrift-hello $ cd dist/build/client
+~/hs-thrift-hello/dist/build/client$ ./client
+```
 
 ### Documentation
+
+This is the only documentation for now.
 
 [Contents](#contents)
 
